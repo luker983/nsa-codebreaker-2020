@@ -1,6 +1,6 @@
 ![Codebreaker Challenge 2020 Solutions Thumbnail](images/thumbnail.png)
 
-These are my solutions to the 2020 [NSA Codebreaker Challenge](https://codebreaker.ltsnet.net). This year they took a phased approach, releasing a second set of challenges about a month before the end of the competition. As the tasks ramp up in difficulty, the write-ups become less of a walkthrough and more of an explanation. I spent many hours on some of these problems and found it difficult to compress my process into something digestable. However, all of my code is available and you can ask any questions you might have in this repo's Discussion page. 
+These are my solutions to the 2020 [NSA Codebreaker Challenge](https://codebreaker.ltsnet.net). This year they took a phased approach, releasing a second set of challenges about a month before the end of the competition. As the tasks ramp up in difficulty, the write-ups become less of a walkthrough and more of an explanation. I spent many hours on some of these problems and found it difficult to compress my process into something digestable. However, all of my code is available and you can ask any questions you might have in [this repo's Discussion page](https://github.com/luker983/nsa-codebreaker-2020/discussions). 
 
 ## Write-Ups
 <div align="center">
