@@ -1,0 +1,35 @@
+Message Types:
+
+OPEN: 0x1
+DATA: 0x2
+CLOSE: 0x3 probably
+
+
+
+
+UPDATER START UPDATE PARAMS:
+
+param1: path: /var/opt/updter/modules
+param2: size: 24
+param3: path: /opt
+param4: size: 4
+ 
+
+Format of a packet:
+
+routed_packet:
+    packet_header (2):
+        flags (1)
+        message type (1)
+
+    routed_header (14):
+        offset (2)
+        path index (1)
+        treeroute header (11):
+            code (4)
+            address count (1)
+            addresses (6):
+                union {
+                    address vector
+                    direct ?
+                }

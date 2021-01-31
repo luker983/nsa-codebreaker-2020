@@ -1,0 +1,32 @@
+#!/usr/bin/env sh
+
+VAR=$PWD
+cd /sys/class/gpio
+
+finish() {
+    echo 22 > unexport
+    echo 23 > unexport
+}
+trap finish EXIT
+
+echo 22 > export
+echo in > gpio22/direction
+echo 23 > export
+echo in > gpio23/direction
+
+while [ 1 ]; do
+    gpio22 = `cat gpio22/value`
+    gpio23 = `cat gpio23/value`
+    if $(($gpio22 & $gpio23)); then
+        touch $VAR/inflight
+        for pidfile in `ls $VAR/registered/*.pid`; do
+            kill -USR1 `cat $pidfile`
+        done
+    else
+        rm -f $VAR/inflight
+        for pidfile in `ls $VAR/registered/*.pid`; do
+            kill -USR2 `cat $pidfile`
+        done
+    fi
+    sleep 1
+done

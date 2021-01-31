@@ -1,0 +1,33 @@
+version: '2'
+services:
+  controller:
+    hostname: the_controller
+    environment:
+        - RT_LOG_LEVEL_INFO=1
+    networks:
+      default:
+        ipv4_address: 192.168.24.2
+    build:
+      context: .
+    ports:
+      - 127.0.0.1:9000:9000
+    entrypoint: "/bin/sh -c 'cd / && /opt/router/router 2 9000 `hostname`'"
+  drone:
+    hostname: the_drone
+    environment:
+        - RT_LOG_LEVEL_INFO=1
+    build:
+      context: .
+      args:
+        - CONTROLLER_ENDPOINT=192.168.24.2:9000
+    ports:
+      - 1234:1234
+    depends_on:
+      - controller
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.24.0/24
+          gateway: 192.168.24.1

@@ -1,0 +1,9 @@
+bank: anniversary + pet name
+email: favorite band + favorite painter + sister's bday
+house alarm: favorite dessert
+keychain: pet name + pet bday
+login: mom's bday + dad's nickname
+music: first date + favorite dessert
+work server: pet name + anniversary
+blog: favorite color + pet name 
+stepinator: color + petName + anniversary +fdate
