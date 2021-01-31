@@ -142,3 +142,4 @@ Taking the degree/minute values from this `RMC` message gives us a flag of `05°
 ## References
 
 * [NMEA Output Description - NavSpark](https://navspark.mybigcommerce.com/content/NMEA_Format_v0.1.pdf)
+* [ARM64 version 2 page 1ARMv8 A64 Quick Reference - University of Washington](https://courses.cs.washington.edu/courses/cse469/18wi/Materials/arm64.pdf)
