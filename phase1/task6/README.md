@@ -43,7 +43,7 @@
 
 ## Solution
 
-If you're like me and don't have much experience with signals, reading is the key to this challenge. Understanding how Hamming code works is really important so go read up on it if you're struggling to understand. I'm just going to discuss the process I went through rather than reinventing the wheel. 
+If you're like me and don't have much experience with signals, reading is the key to this challenge. Understanding how Hamming code works is really important so go read up on it if you're struggling to understand. I'm just going to discuss the process I went through rather than reinventing the wheel. I made this task harder than it needed to be, so if you want to see a write-up from someone that knows what they're doing, check out https://github.com/RezaJanalizadeh/2020-NSA-Codebreaker-Challenge/tree/main/Phase1/Task6. 
 
 First things first, we need to extract bits from the file we're given. We know how the values are stored (IEEE 754 binary16), so it shouldn't be too difficult to get them back. `float_parser.py` does this. If the binary16 value is negative it's interpreted as a zero and otherwise it is interpreted as a 1. NaNs are possible, so just pick a random value to fill in those errors.
 
