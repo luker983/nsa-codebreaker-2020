@@ -141,7 +141,7 @@ Using this trick and slowly working my way through the update process, here were
 | DATA | `pow + size of key.pub + len('key.pub') + 'key.pub' + key.pub` | Same thing as the last request, with the next file. `key.pub` in this case | 
 | DATA | `pow` | Again, trick into skipping validation |
 | DATA | `pow` | This should trigger an error that says: `Error Updating: Extra data after complete update`, lets us know if the update completed successfully | 
-| CLOSE | `pow` | Not necessary, but I wasn't raised in a barn |
+| CLOSE | `pow` | I wasn't raised in a barn |
 
 Once the OPEN request succeeds, the response will be a null byte and we can move on to the DATA. Some errors will occur: `Error Updating: bad signature`. Don't worry, the blanks make it work. Once every frame from the table is sent, the shutdown frame from the last task should work:
 
