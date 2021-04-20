@@ -1,5 +1,0 @@
-compound_NE_02_361bf12820d951fa
-compound_NE_01_3216230873ffddeb
-compound_SE_01_745ec7d838981593
-compound_SW_01_4ad4a5343d84b846
-compound_NW_01_2105e9cd3dd39b12
